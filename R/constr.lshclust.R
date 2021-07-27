@@ -409,6 +409,11 @@ constr.lshclust <- function(x, links, coords, chron = FALSE, output = "RSS") {
             coords <- cbind(x=coords,y=0)
         } else coords <- as.matrix(coords)
     }
+    if(any(nna <- is.na(hcl$height)))
+        warning("Impossible to cluster all the data using the links provided. ",
+                "To identify the ",sum(nna) + 1L," disjoint clusters found, ",
+                "use function cutree with argument k = ",sum(nna) + 1L,
+                " on the present function's output.")
     return(
         structure(
             c(hcl,
