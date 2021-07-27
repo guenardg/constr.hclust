@@ -54,7 +54,7 @@ two-columns only the first two elements or columns are used for the analysis.
 The edges are interpreted as being non directional; there is no need to
 specify an edge going from point a to point b and one going from point b to
 point a. While doing so is generally inconsequential for the analysis, it
-carries some penality in terms of computation time. It is a good practice to
+carries some penalty in terms of computation time. It is a good practice to
 place the nodes in increasing order of numbers from the top to the bottom and
 from the left to the right of the list but this is not mandatory. A word of
 caution: in cases where clusters with identical minimum distances occur, the
@@ -64,13 +64,21 @@ Alternative results would be statistically equivalent.
 When argument \code{link} is omitted, regular (unconstrained) clustering is
 performed and a \code{\link{hclust}-class} object is returned unless
 argument \code{chron = TRUE}. When argument \code{chron = TRUE},
-chronological clustring is performed, taking the order of observations as
+chronological clustering is performed, taking the order of observations as
 their positions in the sequence. Argument \code{links} is not used when
 \code{chron = TRUE}. Argument \code{chron} allows one to perform a
-chronological clustring in the case where observations are ordered
+chronological clustering in the case where observations are ordered
 chronologically. Here, the term "chronologically" should not be taken
 restrictively: the method remains applicable to other sequential data sets
 such as spatial series made of observations along a transect.
+
+When the graph described by \code{link} is not entirely connected, the
+resulting disjoint clusters (or singletons) are merged in the order of their
+indices (ie. the two clusters with smallest indices are merged until all of
+them have been merged), the dissimilarity at which these clusters are
+merged (\code{$height}) is assumed to be a missing value (\code{NA}), and a
+warning message is issued to warn the user about the presence and number of
+disjoint clusters.
 
 Memory storage and time to compute constrained clustering for N objects. ---
 The least squares clustering procedure generally uses less computer memory as

@@ -590,9 +590,6 @@ void clust(int* n, int* membr, int* flag, int* ia, int* ib, double* crit,
     flag[j2] = false;
     update(*n,flag,membr,diss0,par,i2,j2);
     membr[i2] += membr[j2];
-    //
-    
-    // 
     if(ncl > 1) {
       if(fastUpdate) {
         min_diss = R_PosInf;
