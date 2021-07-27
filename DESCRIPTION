@@ -1,7 +1,7 @@
 Package: constr.hclust
 Type: Package
-Version: 1.5-1
-Date: 2021-04-01
+Version: 1.6-1
+Date: 2021-07-26
 Encoding: UTF-8
 Title: Space- And Time-Constrained Clustering Package
 Author: Pierre Legendre and Guillaume Guénard

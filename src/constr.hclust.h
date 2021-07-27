@@ -161,8 +161,6 @@ void cclustLS(int* n, int* merge, double* height, int* order, int* m,
 // Testing functions (called from R using the .C() interface during development)
 // Not to be compiled for regular execution purposes
 #ifdef testing
-void  R_getminlink(int* n, double* diss0, int* nl, int* linkl, int* nn_i,
-                   int* nn_j, double* nn_dist);
 void   R_printdiss(unsigned int n, int* flag, double* diss0);
 void R_printnninfo(unsigned int n, int* flag, unsigned int* nn_idx,
                    double* nn_diss);
