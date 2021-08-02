@@ -48,8 +48,11 @@
 #' details)
 #' @param links A list of edges (or links) connecting the points. May be omitted
 #' in some cases; see details and examples
-#' @param coords Coordinates of the observations (data rows) in \code{d} (for
-#' data plotting purposes; may be omitted: see details and examples)
+#' @param coords Coordinates of the observations (data rows) in matrix \code{d}.
+#' The coordinates are used for plotting maps of the clustering results; may be
+#' omitted. A matrix or data frame with two columns, following the convention of
+#' the Cartesian plane: first column for abscissa, second column for ordinates.
+#' See examples.
 #' @param beta The beta parameter for beta-flexible clustering (default:
 #' \code{beta = -0.25})
 #' @param chron Logical (TRUE or FALSE) indicating whether a chronological (i.e.
@@ -57,7 +60,7 @@
 #' \code{chron = FALSE})
 #' @param members NULL or a vector with length size of \code{d} (default: NULL;
 #' See details)
-#'
+#' 
 #' @return A \code{\link{constr.hclust-class}} object.
 #' 
 #' @details The agglomeration method to be used should be (an unambiguous
