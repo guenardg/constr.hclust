@@ -12,8 +12,11 @@ constr.lshclust(x, links, coords, chron = FALSE, output = "RSS")
 \item{links}{A list of edges (or links) connecting the points. May be omitted
 in some cases; see details and examples}
 
-\item{coords}{Coordinates of the observations (data rows) in \code{x} (for
-data plotting purposes; may be omitted: see details and examples)}
+\item{coords}{Coordinates of the observations (data rows) in matrix \code{d}.
+The coordinates are used for plotting maps of the clustering results; may be
+omitted. A matrix or data frame with two columns, following the convention of
+the Cartesian plane: first column for abscissa, second column for ordinates.
+See examples}
 
 \item{chron}{Logical (TRUE or FALSE) indicating whether a chronological (i.e.
 time-constrained) clustering should be calculated (default:
