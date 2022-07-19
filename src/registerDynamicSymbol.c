@@ -1,6 +1,6 @@
 /*******************************************************************
  Generic calls to R_registerRoutines and R_useDynamicSymbols
- Guillaume Guénard - Université de Montréal - 2008-2019
+ Guillaume Guénard - Université de Montréal - 2018-2022
 *******************************************************************/
 
 #include <R.h>

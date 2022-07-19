@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2021 Guillaume Guénard
+##    (c) 2018-2022 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -164,8 +164,9 @@
 #' \code{\link{cutree}}, and \code{\link{ScotchWhiskey}}
 #' 
 #' @references
-#' Guénard, G. and P. Legendre. Hierarchical clustering with contiguity constraint 
-#' in R. Journal of Statistical Software (submitted).
+#' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
+#' constraint in {R}. Journal of Statistical Software 103(7): 1-12
+#' <doi:10.18637/jss.v103.i07>
 #' 
 #' Langfelder, P. and S. Horvath. 2012. Fast R functions for robust correlations
 #' and hierarchical clustering. Journal of Statistical Software 46: 1-17. 

@@ -1,0 +1,17 @@
+bibentry(bibtype = "Article",
+  title        = "Hierarchical Clustering with Contiguity Constraint in {R}",
+  author       = c(person(given = "Guillaume",
+                          family = "Gu\\'{e}nard",
+                          email = "guillaume.guenard@gmail.com"),
+                   person(given = "Pierre",
+                          family = "Legendre",
+                          email = "pierre.legendre@umontreal.ca")),
+  journal      = "Journal of Statistical Software",
+  year         = "2022",
+  volume       = "103",
+  number       = "7",
+  pages        = "1--26",
+  doi          = "10.18637/jss.v103.i07",
+  header       = "To cite constr.hclust in publications use:"
+)
+

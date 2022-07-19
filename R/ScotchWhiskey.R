@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2021 Guillaume Guénard
+##    (c) 2018-2022 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -93,12 +93,14 @@
 #' D = sqrt(1 - S4) is computed by function \code{dist.binary} using
 #' argument \code{"method=2"}.
 #' 
-#' @source Pierre Legendre <pierre.legendre@@umontreal.ca> and François-Joseph
-#' Lapoints <francois-joseph.lapointe@@umontreal.ca>, Département de sciences
+#' @source
+#' Pierre Legendre <pierre.legendre@@umontreal.ca> and François-Joseph
+#' Lapointe <francois-joseph.lapointe@@umontreal.ca>, Département de sciences
 #' biologiques, Université de Montréal, Montréal, Québec, Canada.
 #' 
-#' @references Lapointe, F.-J. and P. Legendre. 1994. A classification of pure
-#' malt Scotch whiskies. Applied Statistics 43: 237-257
+#' @references
+#' Lapointe, F.-J. and P. Legendre. 1994. A classification of pure malt Scotch
+#' whiskies. Applied Statistics 43: 237-257
 #' <http://www.dcs.ed.ac.uk/home/jhb/whisky/lapointe/text.html>.
 #' 
 #' Gower, J.C. and Legendre, P. 1986. Metric and Euclidean properties of

@@ -82,7 +82,7 @@ data.frame(From=Faithful$Date[tmp],
 }
 \seealso{
 related data set \code{\link{faithful}} in
-\code{\link{datasets-package}} and \code{\link{geyser}} from package
+\code{\link{datasets-package}} and \code{geyser} from package
 \code{MASS}.
 }
 \keyword{Geyser}

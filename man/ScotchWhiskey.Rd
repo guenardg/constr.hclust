@@ -30,7 +30,7 @@ boolean features.}
 }
 \source{
 Pierre Legendre <pierre.legendre@umontreal.ca> and François-Joseph
-Lapoints <francois-joseph.lapointe@umontreal.ca>, Département de sciences
+Lapointe <francois-joseph.lapointe@umontreal.ca>, Département de sciences
 biologiques, Université de Montréal, Montréal, Québec, Canada.
 }
 \usage{
@@ -133,8 +133,8 @@ head(ScotchWhiskey$palate)
 head(ScotchWhiskey$finish)
 }
 \references{
-Lapointe, F.-J. and P. Legendre. 1994. A classification of pure
-malt Scotch whiskies. Applied Statistics 43: 237-257
+Lapointe, F.-J. and P. Legendre. 1994. A classification of pure malt Scotch
+whiskies. Applied Statistics 43: 237-257
 <http://www.dcs.ed.ac.uk/home/jhb/whisky/lapointe/text.html>.
 
 Gower, J.C. and Legendre, P. 1986. Metric and Euclidean properties of

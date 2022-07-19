@@ -415,8 +415,9 @@ res
 
 }
 \references{
-Guénard, G. and P. Legendre. Hierarchical clustering with contiguity constraint 
-in R. Journal of Statistical Software (submitted).
+Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
+constraint in {R}. Journal of Statistical Software 103(7): 1-12
+<doi:10.18637/jss.v103.i07>
 
 Langfelder, P. and S. Horvath. 2012. Fast R functions for robust correlations
 and hierarchical clustering. Journal of Statistical Software 46: 1-17. 

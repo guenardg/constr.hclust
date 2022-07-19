@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2021 Guillaume Guénard
+##    (c) 2018-2022 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -103,8 +103,9 @@
 #' @author Daniel Borcard, <daniel.borcard@@umontreal.ca> and Pierre Legendre
 #' <pierre.legendre@@umontreal.ca>
 #' 
-#' @references Borcard, D. and Legendre, P. 1994. Environmental Control and
-#' Spatial Structure in Ecological Communities: An Example Using Oribatid Mites
+#' @references
+#' Borcard, D. and Legendre, P. 1994. Environmental Control and Spatial
+#' Structure in Ecological Communities: An Example Using Oribatid Mites
 #' (Acari, Oribatei). Environ. Ecol. Stat. 1(1): 37--61
 #' 
 #' Borcard, D., Legendre, P., and Drapeau, P. 1992. Partialling out the spatial

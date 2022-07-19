@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2021 Guillaume Guénard
+##    (c) 2018-2022 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -139,6 +139,10 @@
 #' \code{\link{cutree}}
 #' 
 #' @references
+#' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
+#' constraint in {R}. Journal of Statistical Software 103(7): 1-12
+#' <doi:10.18637/jss.v103.i07>
+#' 
 #' Legendre, P. and L. Legendre. 2012. Numerical ecology, 3rd English edition.
 #' Elsevier Science BV, Amsterdam.
 #' 
@@ -400,7 +404,7 @@ constr.lshclust <- function(x, links, coords, chron = FALSE, output = "RSS") {
     }
     hcl <- .C("cclustLS",
               as.integer(n),             ## n
-              merge = integer(2*(n-1L)),
+              merge = integer(2L*(n-1L)),
               height = double(n-1L),
               order = integer(n),
               m,

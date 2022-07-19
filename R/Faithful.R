@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2021 Guillaume Guénard
+##    (c) 2018-2022 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -72,7 +72,7 @@
 #' of 1142 estimates of the mean eruption interval.
 #'
 #' @seealso related data set \code{\link{faithful}} in
-#' \code{\link{datasets-package}} and \code{\link{geyser}} from package
+#' \code{\link{datasets-package}} and \code{geyser} from package
 #' \code{MASS}.
 #'
 #' @source Guillaume Guenard <guillaume.guenard@gmail.com> and, Pierre Legendre

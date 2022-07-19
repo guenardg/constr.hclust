@@ -106,8 +106,8 @@ for(i in 1L:length(parts)) {
 
 }
 \references{
-Borcard, D. and Legendre, P. 1994. Environmental Control and
-Spatial Structure in Ecological Communities: An Example Using Oribatid Mites
+Borcard, D. and Legendre, P. 1994. Environmental Control and Spatial
+Structure in Ecological Communities: An Example Using Oribatid Mites
 (Acari, Oribatei). Environ. Ecol. Stat. 1(1): 37--61
 
 Borcard, D., Legendre, P., and Drapeau, P. 1992. Partialling out the spatial
