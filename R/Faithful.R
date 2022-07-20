@@ -36,11 +36,11 @@
 ##    R source code file
 ##
 ## **************************************************************************
-##
+## 
 #' Old Faithful Erruption Interval Data Set
-#'
+#' 
 #' Erruption intervals during a time period of approximately eleven years
-#'
+#' 
 #' @docType data
 #' 
 #' @keywords Geyser
@@ -65,16 +65,16 @@
 #' conditions interferring with satelite data transmission. The series was thus
 #' split into 20 segments with continuous observations and the intervals between
 #' the eruptions were calculated for each of them.
-#'
+#' 
 #' For exemplary purposes, the segments were decimated to a smaller size by
 #' averaging individual time intervals using a 50-eruption wide Hann window and
 #' then the decimated data segments were concatenated into a single data series
 #' of 1142 estimates of the mean eruption interval.
-#'
+#' 
 #' @seealso related data set \code{\link{faithful}} in
 #' \code{\link{datasets-package}} and \code{geyser} from package
 #' \code{MASS}.
-#'
+#' 
 #' @source Guillaume Guenard <guillaume.guenard@gmail.com> and, Pierre Legendre
 #' <pierre.legendre@@umontreal.ca>; http://www.geyserstudy.org
 #' 
@@ -90,9 +90,9 @@
 #' 
 #' chcl <- constr.hclust(dst, coords = Faithful$Date, chron = TRUE)
 #' 
-#' ## Plotting the results:
+#' ### Plotting the results:
 #' 
-#' ### Partition sizes and the colors to display them:
+#' ## Partition sizes and the colors to display them:
 #' parts <- c(2,3,4,5,6,7)
 #' cols <- list(
 #'   c("red","purple"),
@@ -103,7 +103,7 @@
 #'   c("red","orange","yellow","green","aquamarine","blue","purple")
 #' )
 #' 
-#' ### Plotting partitions with 2-7 segments:
+#' ## Plotting partitions with 2-7 segments:
 #' par(mar=c(5,6.5,2,2))
 #' plot(x=range(Faithful$Date), y=c(0.5,6.5), type="n", xlab="Time",
 #'      ylab="Partitions\n\n", yaxt="n")

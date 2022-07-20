@@ -108,13 +108,14 @@ for(i in 1L:length(parts)) {
 \references{
 Borcard, D. and Legendre, P. 1994. Environmental Control and Spatial
 Structure in Ecological Communities: An Example Using Oribatid Mites
-(Acari, Oribatei). Environ. Ecol. Stat. 1(1): 37--61
+(Acari, Oribatei). Environ. Ecol. Stat. 1(1): 37-61 \doi{10.1007/BF00714196}
 
 Borcard, D., Legendre, P., and Drapeau, P. 1992. Partialling out the spatial
-component of ecological variation. Ecology, 73, 1045–1055.
+component of ecological variation. Ecology, 73, 1045-1055.
+\doi{10.2307/1940179}
 
 Borcard, D.; Legendre, P.; and Gillet, F. 2018. Numerical Ecology with R
-(2nd Edition) Sprigner, Cham, Switzerland. ISBN 978-3-319-71403-5
+(2nd Edition) Sprigner, Cham, Switzerland. \doi{10.1007/978-3-319-71404-2}
 }
 \seealso{
 Data set \code{oribatid} from package \code{ade4}, which is another

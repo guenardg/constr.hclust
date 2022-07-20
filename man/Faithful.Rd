@@ -51,9 +51,9 @@ dst <- dist(Faithful$Interval)
 
 chcl <- constr.hclust(dst, coords = Faithful$Date, chron = TRUE)
 
-## Plotting the results:
+### Plotting the results:
 
-### Partition sizes and the colors to display them:
+## Partition sizes and the colors to display them:
 parts <- c(2,3,4,5,6,7)
 cols <- list(
   c("red","purple"),
@@ -64,7 +64,7 @@ cols <- list(
   c("red","orange","yellow","green","aquamarine","blue","purple")
 )
 
-### Plotting partitions with 2-7 segments:
+## Plotting partitions with 2-7 segments:
 par(mar=c(5,6.5,2,2))
 plot(x=range(Faithful$Date), y=c(0.5,6.5), type="n", xlab="Time",
      ylab="Partitions\n\n", yaxt="n")

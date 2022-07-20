@@ -100,14 +100,14 @@
 #' 
 #' @references
 #' Lapointe, F.-J. and P. Legendre. 1994. A classification of pure malt Scotch
-#' whiskies. Applied Statistics 43: 237-257
-#' <http://www.dcs.ed.ac.uk/home/jhb/whisky/lapointe/text.html>.
+#' whiskies. Applied Statistics 43: 237-257 \doi{10.2307/2986124}
 #' 
 #' Gower, J.C. and Legendre, P. 1986. Metric and Euclidean properties of
 #' dissimilarity coefficients. Journal of Classification, 3, 5-48.
+#' \doi{10.1007/BF01896809}
 #' 
-#' Legendre, P. and Legendre, L. 2012. Numerical Ecology. 3rd English edition.
-#' Elsevier Science BV, Amsterdam.
+#' Legendre, P. and L. Legendre. 2012. Numerical ecology, 3rd English edition.
+#' Elsevier Science BV, Amsterdam. \doi{10.1016/S0304-3800(00)00291-X}
 #' 
 #' @examples data(ScotchWhiskey)
 #' lapply(ScotchWhiskey,ncol)

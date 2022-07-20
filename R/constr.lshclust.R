@@ -141,10 +141,10 @@
 #' @references
 #' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
 #' constraint in {R}. Journal of Statistical Software 103(7): 1-12
-#' <doi:10.18637/jss.v103.i07>
+#' \doi{10.18637/jss.v103.i07}
 #' 
 #' Legendre, P. and L. Legendre. 2012. Numerical ecology, 3rd English edition.
-#' Elsevier Science BV, Amsterdam.
+#' Elsevier Science BV, Amsterdam. \doi{10.1016/S0304-3800(00)00291-X}
 #' 
 ## @import adespatial
 #' @import sf
@@ -153,69 +153,69 @@
 #' 
 #' @examples
 #' 
-#' ##
-#' ### First example: Artificial map data from Legendre & Legendre
-#' ###                (2012, Fig. 13.26): n = 16
-#' ##
+#' 
+#' ## First example: Artificial map data from Legendre & Legendre
+#' ##                (2012, Fig. 13.26): n = 16
+#' 
 #' dat <- c(41,42,25,38,50,30,41,43,43,41,30,50,38,25,42,41)
 #' coord.dat <- matrix(c(1,3,5,7,2,4,6,8,1,3,5,7,2,4,6,8,
 #'                       4.4,4.4,4.4,4.4,3.3,3.3,3.3,3.3,
 #'                       2.2,2.2,2.2,2.2,1.1,1.1,1.1,1.1),16,2)
 #'
-#' ##
-#' ### Obtaining a list of neighbours:
+#' 
+#' ## Obtaining a list of neighbours:
 #' library(spdep)
 #' listW <- nb2listw(tri2nb(coord.dat), style="B")
 #' links.mat.dat <- listw2mat(listW)
 #' neighbors <- listw2sn(listW)[,1:2]
-#' ##
-#' ### Display the points:
+#' 
+#' ## Display the points:
 #' plot(coord.dat, type='n',asp=1)
 #' title("Delaunay triangulation")
 #' text(coord.dat, labels=as.character(as.matrix(dat)), pos=3)
 #' for(i in 1:nrow(neighbors))
 #'     lines(rbind(coord.dat[neighbors[i,1],],
 #'                 coord.dat[neighbors[i,2],]))
-#' ##
-#' ### Clustering without a contiguity constraint;
-#' ### the result is represented as a dendrogram:
+#' 
+#' ## Clustering without a contiguity constraint;
+#' ## the result is represented as a dendrogram:
 #' grpWD2_constr_lshclust <- constr.lshclust(x=dat, output="RSS")
 #' plot(grpWD2_constr_lshclust, hang=-1)
-#' ##
-#' ### Clustering with a contiguity constraint described by a list of
-#' ### links:
+#' 
+#' ## Clustering with a contiguity constraint described by a list of
+#' ## links:
 #' grpWD2cst_constr_lshclust <-
 #'     constr.lshclust(
 #'         dat, neighbors,
 #'         coord.dat, output="RSS")
-#' ##
-#' ### Plot the results on a map with k=3 clusters:
+#' 
+#' ## Plot the results on a map with k=3 clusters:
 #' plot(grpWD2cst_constr_lshclust, k=3, links=TRUE, las=1, xlab="Eastings",
 #'      ylab="Northings", cex=3, lwd=3)
-#' ##
-#' ### Generic functions from hclust can be used, for instance to obtain
-#' ### a list of members of each cluster:
+#' 
+#' ## Generic functions from hclust can be used, for instance to obtain
+#' ## a list of members of each cluster:
 #' cutree(grpWD2cst_constr_lshclust, k=3)
-#' ##
-#' ### Now with k=5 clusters:
+#' 
+#' ## Now with k=5 clusters:
 #' plot(grpWD2cst_constr_lshclust, k=5, links=TRUE, las=1, xlab="Eastings",
 #'      ylab="Northings", cex=3, lwd=3)
 #' cutree(grpWD2cst_constr_lshclust, k=5)
-#' ##
+#' 
 #' ## End of the artificial map example
 #' 
-#' ##
-#' ### Third example: Scotch Whiskey distilleries clustered using four tasting
-#' ### scores (nose, body, palate, and finish) constrained with respect to the
-#' ### distillery locations in Scotland.
-#' ##
+#' ## Third example: Scotch Whiskey distilleries clustered using four tasting
+#' ## scores (nose, body, palate, and finish) constrained with respect to the
+#' ## distillery locations in Scotland.
+#' 
 #' ## Documentation file about the Scotch Whiskey data: ?ScotchWhiskey
-#' ##
+#' 
 #' data(ScotchWhiskey)
-#' ### Cluster analyses for the colour, nose, body, palate, and finish using
-#' ### least squares on the basis of the Mahalanobis metric.
-#' ##
-#' ### Combining the data matrices:
+#' 
+#' ## Cluster analyses for the colour, nose, body, palate, and finish using
+#' ## least squares on the basis of the Mahalanobis metric.
+#' 
+#' ## Combining the data matrices:
 #' cols <-
 #'     contr.treatment(
 #'         n = nlevels(ScotchWhiskey$colour)
@@ -231,9 +231,10 @@
 #'     ScotchWhiskey$finish
 #' )
 #' rm(cols)
-#' ##
-#' ### Transforming WhiskeyDat into an orthonormal matrix using the Cholesky
-#' ### factorization: the least squares will relate to the Mahalanobis metric.
+#' 
+#' ## Transforming WhiskeyDat into an orthonormal matrix using the Cholesky
+#' ## factorization: the least squares will relate to the Mahalanobis metric.
+#' 
 #' WhiskeyTr <- WhiskeyDat %*% solve(chol(cov(WhiskeyDat)))
 #' grpWD2cst_ScotchWhiskey <-
 #'     constr.lshclust(
@@ -241,8 +242,9 @@
 #'         links=ScotchWhiskey$neighbors@data,
 #'         coords=ScotchWhiskey$geo@coords/1000
 #'     )
-#' ##
-#' ### A fonction to plot the Whiskey clustering results
+#' 
+#' ## A fonction to plot the Whiskey clustering results:
+#' 
 #' plotWhiskey <- function(k) {
 #'     par(fig=c(0,1,0,1))
 #'     plot(grpWD2cst_ScotchWhiskey, k=k, links=TRUE, las=1,
@@ -261,49 +263,50 @@
 #'     rect(xleft=SpeyZoom$xlim[1L], ybottom=SpeyZoom$ylim[1L],
 #'          xright=SpeyZoom$xlim[2L], ytop=SpeyZoom$ylim[2L], lwd=2, lty=1L)
 #' }
-#' ##
-#' ### Plot the clustering results on the map of Scotland for 5 groups.
-#' ### The inset map shows the Speyside distilleries in detail:
+#' 
+#' ## Plot the clustering results on the map of Scotland for 5 groups.
+#' ## The inset map shows the Speyside distilleries in detail:
+#' 
 #' plotWhiskey(k=5L)
-#' ##
+#' 
 #' ## End of the Scotch Whiskey tasting data example
-#' ##
+#' 
 #' \dontrun{
-#' ##
-#' ### Third example: Fish community composition along the Doubs River,
-#' ### France. The sequence is analyzed as a case of chronological
-#' ### clustering, substituting space for time.
-#' ##
+#' 
+#' ## Third example: Fish community composition along the Doubs River,
+#' ## France. The sequence is analyzed as a case of chronological
+#' ## clustering, substituting space for time.
+#' 
 #' library(ade4)
 #' data(doubs, package="ade4")
-#' ##
-#' ### Using the Hellinger metric on the species abundances:
+#' 
+#' ## Using the Hellinger metric on the species abundances:
 #' Doubs.hel <- sqrt(doubs$fish / rowSums(doubs$fish))
 #' Doubs.hel[rowSums(doubs$fish)==0,] <- 0
 #' grpWD2cst_fish <- constr.lshclust(x=Doubs.hel, chron=TRUE,
 #'                                   coords=as.matrix(doubs$xy))
-#' ##
+#' 
 #' plot(grpWD2cst_fish, k=5, las=1, xlab="Eastings (km)",
 #'      ylab="Northings (km)", cex=3, lwd=3)
-#' ##
-#' ### Repeat the plot with other values of k (number of groups)
-#' ##
+#' 
+#' ## Repeat the plot with other values of k (number of groups)
+#' 
 #' ## End of the Doubs River fish assemblages example
 #' 
-#' ##
-#' ### Benchmarking example
-#' ### Benchmarking can be used to estimate computation time for different
-#' ### values of N (number of sites) and M (number of variables).
-#' ##
+#' 
+#' ## Benchmarking example
+#' ## Benchmarking can be used to estimate computation time for different
+#' ## values of N (number of sites) and M (number of variables).
+#' 
 #' require(magrittr)
 #' require(pryr)
-#' ##
+#' 
 #' benchmark <- function(N, M) {
 #'     res <- matrix(NA,length(N)*length(M),4L) %>% as.data.frame
 #'     colnames(res) <- c("N(obs)","M(var)","Storage (MiB)","Time (sec)")
 #'     res[[1L]] <- rep(N,length(M))
 #'     res[[2L]] <- rep(M,each=length(N))
-#'     ##
+#'     
 #'     for(i in 1:nrow(res)) {
 #'         ## i=1L
 #'         cat("N:",res[i,1L]," M:",res[i,2L],"\n")
@@ -331,13 +334,12 @@
 #'     res[["M(var)"]] <- as.integer(res[["M(var)"]])
 #'     res
 #' }
-#' ##
+#' 
 #' N <- c(1000,2000,5000,10000,20000,50000)
 #' M <- c(1,2,5,10,20,50)
 #' res <- benchmark(N, M)
-#' ##
-#' ##
-#' ### Plotting the results:
+#' 
+#' ## Plotting the results:
 #' par(mar=c(3,6,2,2),mfrow=c(2L,1L))
 #' barplot(height = matrix(res[,"Time (sec)"],length(N),length(M)),
 #'         names.arg = N, ylab = "Time (seconds)\n", xlab = "",
@@ -346,20 +348,19 @@
 #' barplot(height = matrix(res[,"Storage (MiB)"],length(N),length(M)),
 #'         names.arg = N, ylab = "Total storage (MB)\n",
 #'         xlab = "Number of observations", las = 1L, log = "y", beside=TRUE)
-#' ##
-#' ### Examine the output file
+#' 
+#' ## Examine the output file
 #' res
-#' ##
-#' ### Analyze how computing time and storage scales up with increasing number
-#' ### of observations and variables.
+#' 
+#' ## Analyze how computing time and storage scales up with increasing number
+#' ## of observations and variables.
 #' lm(log(`Time (sec)`)~log(`N(obs)`)+log(`M(var)`), data=res)
 #' lm(log(`Storage (MiB)`)~log(`N(obs)`)+log(`M(var)`), data=res)
 #' }
-#' ##
-#' ### End of the benchmarking example
-#' ##
-#' ### End of examples
-#' ##
+#' 
+#' ## End of the benchmarking example
+#' 
+#' ## End of examples
 #' 
 #' @useDynLib constr.hclust, .registration = TRUE
 #' @importFrom graphics segments points
