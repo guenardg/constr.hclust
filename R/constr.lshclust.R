@@ -140,19 +140,15 @@
 #' 
 #' @references
 #' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
-#' constraint in {R}. Journal of Statistical Software 103(7): 1-12
+#' constraint in {R}. Journal of Statistical Software 103(7): 1-26
 #' \doi{10.18637/jss.v103.i07}
 #' 
 #' Legendre, P. and L. Legendre. 2012. Numerical ecology, 3rd English edition.
 #' Elsevier Science BV, Amsterdam. \doi{10.1016/S0304-3800(00)00291-X}
 #' 
-## @import adespatial
-#' @import sf
-#' @import sp
-#' @import spdep
+#' @importFrom spdep listw2mat listw2sn nb2listw tri2nb
 #' 
 #' @examples
-#' 
 #' 
 #' ## First example: Artificial map data from Legendre & Legendre
 #' ##                (2012, Fig. 13.26): n = 16

@@ -165,7 +165,7 @@
 #' 
 #' @references
 #' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
-#' constraint in {R}. Journal of Statistical Software 103(7): 1-12
+#' constraint in {R}. Journal of Statistical Software 103(7): 1-26
 #' \doi{10.18637/jss.v103.i07}
 #' 
 #' Langfelder, P. and S. Horvath. 2012. Fast R functions for robust correlations
@@ -183,9 +183,7 @@
 #' Journal of the American Statistical Association 58: 236-244.
 #' \doi{10.1080/01621459.1963.10500845}
 #'
-#' @import sf
-#' @import sp
-#' @import spdep
+#' @importFrom spdep listw2mat listw2sn nb2listw tri2nb
 #' 
 #' @examples
 #' 

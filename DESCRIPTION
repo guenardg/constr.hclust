@@ -7,7 +7,7 @@ Title: Space- And Time-Constrained Clustering Package
 Author: Pierre Legendre and Guillaume Guénard
 Maintainer: Guillaume Guénard <guillaume.guenard@gmail.com>
 Depends: R (>= 3.5.0)
-Imports: sf, sp, spdep
+Imports: sp, spdep
 Description: Space-constrained or time-constrained agglomerative clustering from a multivariate dissimilarity matrix <doi:10.18637/jss.v103.i07>.
 License: GPL-3
 LazyLoad: yes
