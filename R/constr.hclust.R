@@ -1,6 +1,6 @@
 ## **************************************************************************
 ##
-##    (c) 2018-2022 Guillaume Guénard
+##    (c) 2018-2024 Guillaume Guénard
 ##        Department de sciences biologiques,
 ##        Université de Montréal
 ##        Montreal, QC, Canada
@@ -43,9 +43,9 @@
 #' time-constrained agglomerative clustering from a multivariate dissimilarity
 #' matrix.
 #'
-#' @param d A \code{\link{dist}-class} dissimilarity (distance) matrix
+#' @param d A \code{\link{dist}-class} dissimilarity (distance) matrix.
 #' @param method The agglomeration method to be used (default: "ward.D2"; see
-#' details)
+#' details).
 #' @param links A list of edges (or links) connecting the points. May be omitted
 #' in some cases; see details and examples
 #' @param coords Coordinates of the observations (data rows) in the dissimilarity matrix 
@@ -53,14 +53,14 @@
 #' This matrix may be omitted when the user does not wish to print maps of the clustering  
 #' results or when no \code{links} file is provided. \code{coords} is a matrix or data 
 #' frame with two columns, following the convention of the Cartesian plane: 
-#' first column for abscissa, second column for ordinate. See examples
+#' first column for abscissa, second column for ordinate. See examples.
 #' @param beta The beta parameter for beta-flexible clustering (default:
-#' \code{beta = -0.25})
+#' \code{beta = -0.25}).
 #' @param chron Logical (TRUE or FALSE) indicating whether a chronological (i.e.
 #' time-constrained or spatial transect) clustering should be calculated (default:
-#' \code{chron = FALSE})
+#' \code{chron = FALSE}).
 #' @param members NULL or a vector with length size of \code{d} (default: NULL;
-#' See details)
+#' See details).
 #' 
 #' @return A \code{\link{constr.hclust-class}} object.
 #' 
@@ -85,9 +85,9 @@
 #' fused are now neighbours of the newly formed cluster.
 #'
 #' The edges (links) are specified using argument \code{links}, which can be an
-#' object of class \code{nb} (see, e.g., \code{\link{tri2nb}}), an object of
-#' class \code{listw} (see, e.g., \code{\link{nb2listw}}), a two-element
-#' \code{list} or an object coercible as a such (e.g., a two-column
+#' object of class \code{nb} (see, e.g., \code{\link[spdep]{tri2nb}}), an object
+#' of class \code{listw} (see, e.g., \code{\link[spdep]{nb2listw}}), a
+#' two-element \code{list} or an object coercible as a such (e.g., a two-column
 #' \code{dataframe}), or a two-column matrix with each row representing an edge
 #' and the columns representing the two ends of the edges. For lists with more
 #' than two elements, as well as dataframes or matrices with more than

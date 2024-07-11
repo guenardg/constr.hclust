@@ -1,7 +1,7 @@
 Package: constr.hclust
 Type: Package
-Version: 1.6-2
-Date: 2022-07-19
+Version: 1.6-4
+Date: 2024-07-10
 Encoding: UTF-8
 Title: Space- And Time-Constrained Clustering Package
 Author: Pierre Legendre and Guillaume Guénard
@@ -12,4 +12,4 @@ Description: Space-constrained or time-constrained agglomerative clustering from
 License: GPL-3
 LazyLoad: yes
 NeedsCompilation: yes
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.1

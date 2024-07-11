@@ -15,10 +15,10 @@ constr.hclust(
 )
 }
 \arguments{
-\item{d}{A \code{\link{dist}-class} dissimilarity (distance) matrix}
+\item{d}{A \code{\link{dist}-class} dissimilarity (distance) matrix.}
 
 \item{method}{The agglomeration method to be used (default: "ward.D2"; see
-details)}
+details).}
 
 \item{links}{A list of edges (or links) connecting the points. May be omitted
 in some cases; see details and examples}
@@ -28,17 +28,17 @@ in some cases; see details and examples}
 This matrix may be omitted when the user does not wish to print maps of the clustering  
 results or when no \code{links} file is provided. \code{coords} is a matrix or data 
 frame with two columns, following the convention of the Cartesian plane: 
-first column for abscissa, second column for ordinate. See examples}
+first column for abscissa, second column for ordinate. See examples.}
 
 \item{beta}{The beta parameter for beta-flexible clustering (default:
-\code{beta = -0.25})}
+\code{beta = -0.25}).}
 
 \item{chron}{Logical (TRUE or FALSE) indicating whether a chronological (i.e.
 time-constrained or spatial transect) clustering should be calculated (default:
-\code{chron = FALSE})}
+\code{chron = FALSE}).}
 
 \item{members}{NULL or a vector with length size of \code{d} (default: NULL;
-See details)}
+See details).}
 }
 \value{
 A \code{\link{constr.hclust-class}} object.
@@ -70,9 +70,9 @@ step. All objects that are neighbours of one of the components that have
 fused are now neighbours of the newly formed cluster.
 
 The edges (links) are specified using argument \code{links}, which can be an
-object of class \code{nb} (see, e.g., \code{\link{tri2nb}}), an object of
-class \code{listw} (see, e.g., \code{\link{nb2listw}}), a two-element
-\code{list} or an object coercible as a such (e.g., a two-column
+object of class \code{nb} (see, e.g., \code{\link[spdep]{tri2nb}}), an object
+of class \code{listw} (see, e.g., \code{\link[spdep]{nb2listw}}), a
+two-element \code{list} or an object coercible as a such (e.g., a two-column
 \code{dataframe}), or a two-column matrix with each row representing an edge
 and the columns representing the two ends of the edges. For lists with more
 than two elements, as well as dataframes or matrices with more than

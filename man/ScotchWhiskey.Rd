@@ -7,8 +7,8 @@
 \format{
 A list with 12 members:
 \describe{
-\item{geo}{A \code{\link{SpatialPointsDataFrame-class}} object containing the
-geographic coordinates and other information about the distilleries.}
+\item{geo}{A \code{\link[sp]{SpatialPointsDataFrame-class}} object containing
+the geographic coordinates and other information about the distilleries.}
 \item{colour}{The whiskey colour coded as a 14-level factor.}
 \item{nose}{A set of 12 nasal notes (boolean).}
 \item{body}{A set of 8 body notes (boolean).}
@@ -16,12 +16,12 @@ geographic coordinates and other information about the distilleries.}
 \item{finish}{A set of 19 finish (or after-taste) notes (boolean).}
 \item{nbChar}{Number of characteristics attributed to each distillery for
 each of the four sets of boolean features: nose, body, palate, finish.}
-\item{listW}{A \code{listw} object (see \code{\link{nb2listw}})
+\item{listW}{A \code{listw} object (see \code{\link[spdep]{nb2listw}})
 containing information about the spatial edges (neighbour links) between the
 distilleries.}
 \item{links.mat}{A binary square matrix of the spatial connexions between the
 distilleries (contiguity matrix).}
-\item{neighbors}{A \code{\link{SpatialLinesDataFrame-class}} object
+\item{neighbors}{A \code{\link[sp]{SpatialLinesDataFrame-class}} object
 containing geographic information about the spatial links between the
 distilleries.}
 \item{dist}{A list of distance matrices obtained for each of the four sets of
@@ -140,7 +140,7 @@ Gower, J.C. and Legendre, P. 1986. Metric and Euclidean properties of
 dissimilarity coefficients. Journal of Classification, 3, 5-48.
 \doi{10.1007/BF01896809}
 
-Legendre, P. and L. Legendre. 2012. Numerical ecology, 3rd English edition.
+Legendre, P. and Legendre, L. 2012. Numerical Ecology. 3rd English edition.
 Elsevier Science BV, Amsterdam. \doi{10.1016/S0304-3800(00)00291-X}
 }
 \keyword{Scotch}

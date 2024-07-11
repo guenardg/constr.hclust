@@ -72,9 +72,9 @@
 #' fused are now neighbours of the newly formed cluster.
 #'
 #' The edges (links) are specified using argument \code{links}, which can be an
-#' object of class \code{nb} (see, e.g., \code{\link{tri2nb}}), an object of
-#' class \code{listw} (see, e.g., \code{\link{nb2listw}}), a two-element
-#' \code{list} or an object coercible as a such (e.g., a two-column
+#' object of class \code{nb} (see, e.g., \code{\link[spdep]{tri2nb}}), an object
+#' of class \code{listw} (see, e.g., \code{\link[spdep]{nb2listw}}), a
+#' two-element \code{list} or an object coercible as a such (e.g., a two-column
 #' \code{dataframe}), or a two-column matrix with each row representing an edge
 #' and the columns representing the two ends of the edges. For lists with more
 #' than two elements, as well as dataframes or matrices with more than
